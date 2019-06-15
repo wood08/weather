@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from '@expo/vector-icons';
+import PropTypes from 'prop-types';
 
 const weatherCases = {
     Rain: {
@@ -62,6 +63,10 @@ function Weather({temp, weatherName}){
         </LinearGradient>
     );
 }
+Weather.propTypes = {
+    temp: PropTypes.number.isRequired,
+    weatherName: PropTypes.string.isRequired
+};
 export default Weather;
 
 const styles = StyleSheet.create({
